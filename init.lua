@@ -102,6 +102,11 @@ vim.o.confirm = true
 vim.o.number = true
 vim.o.relativenumber = true
 
+-- Tab indentation
+vim.o.tabstop = 4 -- Visible width of a tab
+vim.o.shiftwidth = 4 -- Width of an indentation
+vim.o.expandtab = true -- Use spaces instead of tabs
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
