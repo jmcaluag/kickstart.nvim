@@ -3,8 +3,18 @@ return { -- You can easily change to a different colorscheme.
   -- change the command in the config to whatever the name of that colorscheme is.
   --
   -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-  'shaunsingh/nord.nvim',
-  lazy = false,
+  'catppuccin/nvim',
+  name = 'catppuccin',
   priority = 1000,
-  config = function() vim.cmd 'colorscheme nord' end,
+  config = function()
+    require('catppuccin').setup {
+      flavour = 'frappe', -- latte, frappe, macchiato, mocha
+      background = { -- :h background
+        light = 'latte',
+        dark = 'mocha',
+      },
+    }
+
+    vim.cmd.colorscheme 'catppuccin'
+  end,
 }
