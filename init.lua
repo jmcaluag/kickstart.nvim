@@ -27,6 +27,13 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
+-- Suppress vscode-neovim message area noise
+-- https://github.com/vscode-neovim/vscode-neovim/issues/2507
+-- This isn't working.
+-- The solution is to wait for this PR to be merged: https://github.com/vscode-neovim/vscode-neovim/pull/2515
+-- OR use neovim 0.11
+if vim.g.vscode then vim.opt.cmdheight = 99 end
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
